@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.ir.appsplashscreen.AdapterPager.AdapterPager
 import com.ir.appsplashscreen.DataClassPager.DataClassPager
@@ -54,6 +56,15 @@ class SplashFragment : Fragment() {
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
         }.attach()
 
+        binding.cardSkip.setOnClickListener {
+            findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+        }
+
+        binding.viewPager.registerOnPageChangeCallback( object : ViewPager2.OnPageChangeCallback(){
+            override fun onPageSelected(position: Int) {
+                Object.image = arrayListPager[position].image
+            }
+        })
 
         return binding.root
     }

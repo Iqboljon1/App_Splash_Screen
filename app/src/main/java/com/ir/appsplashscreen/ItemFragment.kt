@@ -36,10 +36,7 @@ class ItemFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentItemBinding.inflate(layoutInflater)
-        binding.cardSkip.setOnClickListener {
-            findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
-            Object.image = param3?.toInt()!!
-        }
+
         binding.tvName.text = param1
         binding.tvManoliSoz.text = param2
         binding.imageItemBackground.setImageResource(param3!!.toInt())

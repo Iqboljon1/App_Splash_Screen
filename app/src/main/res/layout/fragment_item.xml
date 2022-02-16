@@ -17,31 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#CC000000">
-
-        <LinearLayout
-            android:id="@+id/card_skip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/card_backgound"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                android:gravity="center"
-                android:text="O'tkazib yuborish"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="normal"
-                tools:ignore="HardcodedText" />
-
-
-        </LinearLayout>
-
+        
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
